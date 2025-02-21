@@ -48,10 +48,10 @@ const props = defineProps<Props>();
 
 ### Page Structure
 
-Pages are stored in `resources/js/pages/` and follow the Laravel route structure:
+Pages are stored in `resources/js/Pages/` and follow the Laravel route structure:
 
 ```
-pages/
+Pages/
 ├── Auth/
 │   ├── Login.vue
 │   └── Register.vue
