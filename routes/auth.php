@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
@@ -29,7 +30,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/reset-password/{token}', function (string $token) {
         return Inertia::render('Auth/PasswordReset', [
             'token' => $token,
-            'email' => request('email'),
+            'email' => Request::input('email'),
         ]);
     })->name('password.reset');
 
