@@ -18,11 +18,12 @@ createServer((page) =>
                 import.meta.glob<DefineComponent>('./Pages/**/*.vue'),
             ),
         setup({ App, props, plugin }) {
+            const ziggy = (page.props as unknown as App.PageProps).ziggy;
             return createSSRApp({ render: () => h(App, props) })
                 .use(plugin)
                 .use(ZiggyVue, {
-                    ...page.props.ziggy,
-                    location: new URL(page.props.ziggy.location),
+                    ...ziggy,
+                    location: new URL(ziggy.location),
                 });
         },
     }),
