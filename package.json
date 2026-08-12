@@ -46,7 +46,7 @@
         "eslint": "^9.39.4",
         "eslint-plugin-vue": "^9.33.0",
         "laravel-vite-plugin": "^2.1.0",
-        "postcss": "^8.5.15",
+        "postcss": "^8.5.23",
         "prettier": "^3.8.4",
         "prettier-plugin-organize-imports": "^4.3.0",
         "prettier-plugin-tailwindcss": "^0.6.14",
